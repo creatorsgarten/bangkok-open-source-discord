@@ -14,10 +14,10 @@ jobs:
       - name: Set up Bun
         uses: oven-sh/setup-bun@v0.1.8
         with:
-          bun-version: latest
-          github-token: '0.5.4'
+          bun-version: '0.5.4'
+          github-token: ${{ secrets.GITHUB_TOKEN }}}
       - name: Synchronize
-        run: bun index.ts
+        run: bun scripts/sync.ts
         env:
           RESOURCES_WEBHOOK_URL: ${{ secrets.RESOURCES_WEBHOOK_URL }}
           RESOURCES_MESSAGE_ID: ${{ secrets.RESOURCES_MESSAGE_ID }}
