@@ -23,3 +23,5 @@ jobs:
         env:
           RESOURCES_WEBHOOK_URL: ${{ secrets.RESOURCES_WEBHOOK_URL }}
           RESOURCES_MESSAGE_ID: ${{ secrets.RESOURCES_MESSAGE_ID }}
+          RULES_WEBHOOK_URL: ${{ secrets.RULES_WEBHOOK_URL }}
+          RULES_MESSAGE_ID: ${{ secrets.RULES_MESSAGE_ID }}
