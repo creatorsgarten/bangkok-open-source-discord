@@ -7,3 +7,9 @@ Scripts for managing the [**Bangkok Open Source Initiative** Discord server](htt
 Edit these messages files, and the corresponding messages will be updated in the Discord server.
 
 - [`./messages/resources.txt`](./messages/resources.txt) &rarr; [#resources channel](https://discord.com/channels/1062609208106832002/1062609209126039645/1070367687647166474)
+
+## Why
+
+In Discord, only the creator of the message can edit it. By applying the principles of GitOps and put the message contents on Git and use GitHub Actions to update the messages on behalf of the server admin, anyone can contribute by submitting pull requests, making the process of maintaining and updating important information in Discord communities more efficient, collaborative, and transparent.
+
+<img width="1032" alt="image" src="https://user-images.githubusercontent.com/193136/216098888-9441f09d-3735-459d-881e-3ed783cee16f.png">
