@@ -7,6 +7,7 @@ Scripts for managing the [**Bangkok Open Source Initiative** Discord server](htt
 Edit these messages files, and the corresponding messages will be updated in the Discord server.
 
 - [`./messages/resources.txt`](./messages/resources.txt) &rarr; [#resources channel](https://discord.com/channels/1062609208106832002/1062609209126039645/1070367687647166474)
+- [`./messages/rules.txt`](./messages/rules.txt) &rarr; [#rules channel](https://discord.com/channels/1062609208106832002/1070380037435568233/1070380691969290372)
 
 ## Why
 
