@@ -1,2 +1,4 @@
 **Bangkok Open Source Hackathon information**
 https://bangkok.creatorsgarten.org/
+
+[[แก้ไขข้อความ](https://github.com/creatorsgarten/bangkok-open-source-discord/blob/main/messages/resources.txt))
