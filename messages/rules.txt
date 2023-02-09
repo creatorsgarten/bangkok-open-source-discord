@@ -6,9 +6,7 @@
 
 วันที่ 19 กุมภาพันธ์นี้ เรากำลังจะจัดงาน Bangkok Open Source Hackathon สามารถดูรายละเอียดและสมัครได้ที่ [Eventpop](https://bangkok.creatorsgarten.org/) 
 
-[[แก้ไขข้อความ](https://github.com/creatorsgarten/bangkok-open-source-discord/blob/main/messages/rules.txt)]
-
----
+⸻
 
 1. เคารพซึ่งกันและกัน: ห้ามใช้ hate speech, bully, harassment, และใช้ภาษาเชิงดูถูกเหยียดหยาม
 
@@ -21,3 +19,5 @@
 5. ห้าม Toxic และ Doomposting ทุกกรณี เช่น บอกว่าไอเดียนี้ไม่ดีโดยไม่มีเหตุผลเชิงสร้างสรรค์มารองรับ
 
 กฏทั้งหมดนี้อาจจะถูกปรับปรุง แก้ไข หรือเพื่มเติมได้ตลอดเวลา ขึ้นอยู่กับความต้องการและ/หรือเป้าหมายของกลุ่ม Discord นี้
+
+[[แก้ไขข้อความ](https://github.com/creatorsgarten/bangkok-open-source-discord/blob/main/messages/rules.txt)]
