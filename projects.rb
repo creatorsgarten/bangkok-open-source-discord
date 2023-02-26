@@ -7,6 +7,7 @@ teams = [
   Team.new(id: 'fillyouintheblank',  slug: 'fill-you-in-the-blank',  name: 'Fill You In The Blank'),
   Team.new(id: 'smarttrafficlights', slug: 'smart-traffic-lights',   name: 'Smart Traffic Lights'),
   Team.new(id: 'bkkchangelog',       slug: 'bkkchangelog',           name: 'bkkchangelog'),
+  Team.new(id: 'policytracka',       slug: 'policytracka',           name: 'policytracka'),
 ]
 
 File.open 'projects.tf', 'w' do |f|
