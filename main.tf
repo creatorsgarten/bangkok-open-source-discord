@@ -8,5 +8,10 @@ terraform {
 }
 
 provider "discord" {
-  # Configuration options
+  token = var.discord_token
+}
+
+variable "discord_token" {
+  type      = string
+  sensitive = true
 }
