@@ -171,3 +171,4 @@ dist
 .envrc
 .terraform
 terraform.tfstate.backup
+/projects.tf
