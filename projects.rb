@@ -2,7 +2,7 @@ Team = Struct.new(:id, :slug, :name, keyword_init: true)
 
 teams = [
   Team.new(id: 'ratchagitja',        slug: 'ratchagitja',            name: 'Ratchagitja'),
-  Team.new(id: 'greenspaces',        slug: 'green-population',       name: 'Green Spaces'),
+  Team.new(id: 'greenspaces',        slug: 'green-population',       name: 'Green Population'),
   Team.new(id: 'bankforthepoor',     slug: 'bank-for-the-poor',      name: 'Bank for the Poor'),
   Team.new(id: 'fillyouintheblank',  slug: 'fill-you-in-the-blank',  name: 'Fill You In The Blank'),
   Team.new(id: 'smarttrafficlights', slug: 'smart-traffic-lights',   name: 'Smart Traffic Lights'),
