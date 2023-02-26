@@ -1,12 +1,12 @@
 Team = Struct.new(:id, :slug, :name, keyword_init: true)
 
 teams = [
-  Team.new(id: 'ratchagitja',        slug: 'ratchagitja',        name: 'Ratchagitja'),
-  Team.new(id: 'greenspaces',        slug: 'greenspaces',        name: 'Green Spaces'),
-  Team.new(id: 'bankforthepoor',     slug: 'bankforthepoor',     name: 'Bank for the Poor'),
-  Team.new(id: 'fillyouintheblank',  slug: 'fillyouintheblank',  name: 'Fill You In The Blank'),
-  Team.new(id: 'smarttrafficlights', slug: 'smarttrafficlights', name: 'Smart Traffic Lights'),
-  Team.new(id: 'bkkchangelog',       slug: 'bkkchangelog',       name: 'bkkchangelog'),
+  Team.new(id: 'ratchagitja',        slug: 'ratchagitja',            name: 'Ratchagitja'),
+  Team.new(id: 'greenspaces',        slug: 'green-population',       name: 'Green Spaces'),
+  Team.new(id: 'bankforthepoor',     slug: 'bank-for-the-poor',      name: 'Bank for the Poor'),
+  Team.new(id: 'fillyouintheblank',  slug: 'fill-you-in-the-blank',  name: 'Fill You In The Blank'),
+  Team.new(id: 'smarttrafficlights', slug: 'smart-traffic-lights',   name: 'Smart Traffic Lights'),
+  Team.new(id: 'bkkchangelog',       slug: 'bkkchangelog',           name: 'bkkchangelog'),
 ]
 
 File.open 'projects.tf', 'w' do |f|
@@ -17,12 +17,12 @@ File.open 'projects.tf', 'w' do |f|
         server_id = var.server_id
       }
       resource "discord_text_channel" "#{team.id}_text" {
-        name      = "#{team.id}"
+        name      = "#{team.slug}"
         server_id = var.server_id
         category  = discord_category_channel.#{team.id}_category.id
       }
       resource "discord_role" "#{team.id}_role" {
-        name        = "proj-#{team.id}"
+        name        = "proj-#{team.slug}"
         server_id   = var.server_id
         mentionable = true
       }
