@@ -15,3 +15,7 @@ variable "discord_token" {
   type      = string
   sensitive = true
 }
+
+variable "server_id" {
+  default = "1062609208106832002"
+}
