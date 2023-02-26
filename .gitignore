@@ -170,3 +170,4 @@ dist
 
 .envrc
 .terraform
+terraform.tfstate.backup
