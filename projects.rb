@@ -17,7 +17,7 @@ File.open 'projects.tf', 'w' do |f|
         server_id = var.server_id
       }
       resource "discord_text_channel" "#{team.slug}_text" {
-        name      = "#{team.slug}-text"
+        name      = "#{team.slug}"
         server_id = var.server_id
         category  = discord_category_channel.#{team.slug}_category.id
       }
