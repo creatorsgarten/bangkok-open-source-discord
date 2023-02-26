@@ -1,0 +1,28 @@
+name: Terraform
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+  workflow_dispatch:
+jobs:
+  sync:
+    name: Apply
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Synchronize
+        run: terraform apply -input=false
+        env:
+          TF_VAR_discord_token: ${{ secrets.DISCORD_TOKEN }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        if: always()
+        with:
+          commit_message: Update state file
+          commit_user_name: 'creatorsgarten[bot]'
+          commit_user_email: 'creatorsgarten[bot]@users.noreply.github.com'
+      - name: Dump the new state
+        if: always()
+        run: cat terraform.tfstate
