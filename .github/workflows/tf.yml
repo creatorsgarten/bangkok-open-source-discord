@@ -16,7 +16,7 @@ jobs:
       - name: Set up Terraform
         run: terraform init
       - name: Synchronize
-        run: terraform apply -input=false
+        run: terraform apply -input=false -auto-approve
         env:
           TF_VAR_discord_token: ${{ secrets.DISCORD_TOKEN }}
       - uses: stefanzweifel/git-auto-commit-action@v4
