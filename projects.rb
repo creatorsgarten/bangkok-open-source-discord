@@ -16,11 +16,19 @@ File.open 'projects.tf', 'w' do |f|
         name      = "#{team.name}"
         server_id = var.server_id
       }
-
       resource "discord_text_channel" "#{team.slug}_text" {
         name      = "#{team.slug}-text"
         server_id = var.server_id
         category  = discord_category_channel.#{team.slug}_category.id
+      }
+      resource "discord_role" "#{team.slug}_role" {
+        name        = "proj-#{team.slug}"
+        server_id   = var.server_id
+        mentionable = true
+      }
+      resource discord_message "#{team.slug}_rolemessage" {
+        channel_id = discord_text_channel.#{team.slug}_text.id
+        content    = "Welcome to the **#{team.name}** project! (React to this message to join.)"
       }
     EOF
   end
