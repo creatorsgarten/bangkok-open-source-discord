@@ -1,8 +1,15 @@
-Team = Struct.new(:id, :slug, :name, keyword_init: true)
+Team = Struct.new(:id, :slug, :name, :text_channels, keyword_init: true) do
+  def with_text_channels(*channels)
+    self.text_channels ||= []
+    self.text_channels += channels
+    self
+  end
+end
 
 teams = [
   Team.new(id: 'ratchagitja',        slug: 'ratchagitja',            name: 'Ratchagitja'),
-  Team.new(id: 'greenspaces',        slug: 'green-population',       name: 'Green Population'),
+  Team.new(id: 'greenspaces',        slug: 'green-population',       name: 'Green Population')
+    .with_text_channels('we-space'),
   Team.new(id: 'bankforthepoor',     slug: 'bank-for-the-poor',      name: 'Bank for the Poor'),
   Team.new(id: 'fillyouintheblank',  slug: 'fill-you-in-the-blank',  name: 'Fill You In The Blank'),
   Team.new(id: 'smarttrafficlights', slug: 'smart-traffic-lights',   name: 'Smart Traffic Lights'),
@@ -32,5 +39,14 @@ File.open 'projects.tf', 'w' do |f|
         content    = "Welcome to the **#{team.name}** project! (React to this message to join.)"
       }
     EOF
+    (team.text_channels || []).each do |channel|
+      f.puts <<~EOF
+        resource "discord_text_channel" "#{team.id}_#{channel}_text" {
+          name      = "#{channel}"
+          server_id = var.server_id
+          category  = discord_category_channel.#{team.id}_category.id
+        }
+      EOF
+    end
   end
 end
