@@ -11,7 +11,8 @@ teams = [
   Team.new(id: 'greenspaces',        slug: 'green-population',       name: 'Green Population')
     .with_text_channels(wespace: 'we-space'),
   Team.new(id: 'bankforthepoor',     slug: 'bank-for-the-poor',      name: 'Bank for the Poor'),
-  Team.new(id: 'fillyouintheblank',  slug: 'fill-you-in-the-blank',  name: 'Fill You In The Blank'),
+  Team.new(id: 'fillyouintheblank',  slug: 'fill-you-in-the-blank',  name: 'Fill You In The Blank')
+    .with_text_channels(wikibangkok: 'wikibangkok'),
   Team.new(id: 'smarttrafficlights', slug: 'smart-traffic-lights',   name: 'Smart Traffic Lights'),
   Team.new(id: 'bkkchangelog',       slug: 'bkkchangelog',           name: 'bkkchangelog'),
   Team.new(id: 'policytracka',       slug: 'policytracka',           name: 'policytracka'),
