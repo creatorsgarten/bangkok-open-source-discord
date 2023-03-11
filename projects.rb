@@ -10,7 +10,7 @@ teams = [
   Team.new(id: 'ratchagitja',         slug: 'ratchagitja',            name: 'Ratchagitja'),
   Team.new(id: 'greenspaces',         slug: 'green-population',       name: 'Green Population')
     .with_text_channels(wespace: 'we-space'),
-  Team.new(id: 'bankforthepoor',      slug: 'bank-for-the-poor',      name: 'Bank for the Poor'),
+  Team.new(id: 'bankforthepoor',      slug: 'bank4all',               name: 'Bank4all'),
   Team.new(id: 'fillyouintheblank',   slug: 'fill-you-in-the-blank',  name: 'Fill You In The Blank')
     .with_text_channels(wikibangkok: 'wikibangkok'),
   Team.new(id: 'smarttrafficlights',  slug: 'smart-traffic-lights',   name: 'Smart Traffic Lights'),
