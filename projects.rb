@@ -19,6 +19,7 @@ teams = [
   Team.new(id: 'mobility4all',        slug: 'mobility4all',           name: 'Mobility4All'),
   Team.new(id: 'spendingvisualizer',  slug: 'spending-visualizer',    name: 'Spending Visualizer'),
   Team.new(id: 'A123456',             slug: 'a123456',                name: 'A123456 Gambling Den'),
+  Team.new(id: 'thailandarearanking',             slug: 'thailand-area-ranking',                name: 'Thailand Area Ranking'),
 ]
 
 File.open 'projects.tf', 'w' do |f|
