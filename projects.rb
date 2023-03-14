@@ -45,7 +45,7 @@ def hsv_to_rgb(hue, saturation, value)
 end
 
 def role_color(i, total)
-  hsv_to_rgb(i * 360 / total, 0.5, 0.75)
+  hsv_to_rgb(i * 360 / total, 0.64, 0.8)
 end
 
 File.open 'projects.tf', 'w' do |f|
