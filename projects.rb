@@ -38,6 +38,7 @@ File.open 'projects.tf', 'w' do |f|
         name        = "proj-#{team.slug}"
         server_id   = var.server_id
         mentionable = true
+        color       = 255
       }
       resource discord_message "#{team.id}_rolemessage" {
         channel_id = discord_text_channel.#{team.id}_text.id
