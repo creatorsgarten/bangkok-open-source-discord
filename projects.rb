@@ -43,6 +43,12 @@ File.open 'projects.tf', 'w' do |f|
         channel_id = discord_text_channel.#{team.id}_text.id
         content    = "Welcome to the **#{team.name}** project! (React to this message to join.)"
       }
+      resource "discord_channel_permission" "#{team.id}_rolepermission" {
+        channel_id = discord_category_channel.#{team.id}_category.id
+        type = "role"
+        overwrite_id = discord_role.#{team.id}_role.id
+        allow = data.discord_permission.team_member.allow_bits
+      }
     EOF
     (team.text_channels || []).each do |key, channel_name|
       f.puts <<~EOF

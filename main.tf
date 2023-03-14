@@ -19,3 +19,7 @@ variable "discord_token" {
 variable "server_id" {
   default = "1062609208106832002"
 }
+
+data "discord_permission" "team_member" {
+  manage_messages = "allow"
+}
