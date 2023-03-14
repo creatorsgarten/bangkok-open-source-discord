@@ -22,6 +22,32 @@ teams = [
   Team.new(id: 'thailandarearanking',             slug: 'thailand-area-ranking',                name: 'Thailand Area Ranking'),
 ]
 
+def hsv_to_rgb(hue, saturation, value)
+  c = value * saturation
+  x = c * (1 - ((hue / 60) % 2 - 1).abs)
+  m = value - c
+
+  r, g, b = if hue < 60
+    [c, x, 0]
+  elsif hue < 120
+    [x, c, 0]
+  elsif hue < 180
+    [0, c, x]
+  elsif hue < 240
+    [0, x, c]
+  elsif hue < 300
+    [x, 0, c]
+  else
+    [c, 0, x]
+  end
+
+  [(r + m) * 255, (g + m) * 255, (b + m) * 255].map(&:round).inject(0) { |rgb, color| (rgb << 8) + color }
+end
+
+def role_color(i, total)
+  hsv_to_rgb(i * 360 / total, 0.5, 0.75)
+end
+
 File.open 'projects.tf', 'w' do |f|
   teams.each do |team|
     f.puts <<~EOF
@@ -38,7 +64,7 @@ File.open 'projects.tf', 'w' do |f|
         name        = "proj-#{team.slug}"
         server_id   = var.server_id
         mentionable = true
-        color       = 255
+        color       = #{role_color(teams.index(team), teams.size)}
       }
       resource discord_message "#{team.id}_rolemessage" {
         channel_id = discord_text_channel.#{team.id}_text.id
