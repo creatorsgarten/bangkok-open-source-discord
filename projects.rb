@@ -14,13 +14,13 @@ teams = [
   Team.new(id: 'fillyouintheblank',   slug: 'fill-you-in-the-blank',  name: 'Fill You In The Blank')
     .with_text_channels(wikibangkok: 'wikibangkok'),
   Team.new(id: 'smarttrafficlights',  slug: 'smart-traffic-lights',   name: 'Smart Traffic Lights'),
-  Team.new(id: 'BKKRewardHunter',  slug: 'bkk-reward-hunter',   name: 'BKK Reward Hunter'),
+  Team.new(id: 'BKKRewardHunter',     slug: 'bkk-reward-hunter',      name: 'BKK Reward Hunter'),
   Team.new(id: 'bkkchangelog',        slug: 'bkkchangelog',           name: 'bkkchangelog'),
   Team.new(id: 'policytracka',        slug: 'policytracka',           name: 'policytracka'),
   Team.new(id: 'mobility4all',        slug: 'mobility4all',           name: 'Mobility4All'),
   Team.new(id: 'spendingvisualizer',  slug: 'spending-visualizer',    name: 'Spending Visualizer'),
-  Team.new(id: 'A123456',             slug: 'a123456',                name: 'A123456 Gambling Den'),
-  Team.new(id: 'thailandarearanking',             slug: 'thailand-area-ranking',                name: 'Thailand Area Ranking'),
+  Team.new(id: 'thailandarearanking', slug: 'thailand-area-ranking',  name: 'Thailand Area Ranking'),
+  Team.new(id: 'vote66',              slug: 'vote66',                 name: 'Vote 66'),
 ]
 
 def hsv_to_rgb(hue, saturation, value)
