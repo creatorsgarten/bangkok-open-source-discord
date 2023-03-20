@@ -5,7 +5,7 @@ import {
   Role,
   TextChannel,
 } from '../src/Discord.js'
-import { colord } from 'colord'
+import { colord } from '../src/colord.js'
 import { PermissionFlagsBits } from 'discord-api-types/v10'
 
 const guildId = '1062609208106832002'
@@ -93,7 +93,7 @@ function team(id: string, data: TeamData) {
   const getColor = () => {
     const index = teamSlugs.indexOf(data.slug)
     const hue = Math.round((index * 360) / teamSlugs.length)
-    const color = colord({ h: hue, s: 80, l: 64 }).toRgb()
+    const color = colord({ h: hue, c: 72, l: 72 }).toRgb()
     return (color.r << 16) + (color.g << 8) + color.b
   }
   const category = defineResource(Category, id, () => ({
