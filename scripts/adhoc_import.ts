@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs'
 import { injectState } from '../src/Reconciler.js'
-import { Category, TextChannel } from '../src/Discord.js'
+import { Category, Role, TextChannel } from '../src/Discord.js'
 
 const tfstate = JSON.parse(readFileSync('terraform.tfstate', 'utf8'))
 
@@ -32,6 +32,21 @@ for (const resource of tfstate.resources) {
           name: only(resource.instances).attributes.name,
           guildId: '1062609208106832002',
           parentId: only(resource.instances).attributes.category,
+        },
+        { id: only(resource.instances).attributes.id },
+      )
+    }
+  }
+  if (resource.type === 'discord_role') {
+    if (resource.name.match(/_role$/)) {
+      await injectState(
+        Role,
+        resource.name.replace(/_role$/, ''),
+        {
+          name: only(resource.instances).attributes.name,
+          guildId: '1062609208106832002',
+          color: only(resource.instances).attributes.color,
+          mentionable: only(resource.instances).attributes.mentionable,
         },
         { id: only(resource.instances).attributes.id },
       )

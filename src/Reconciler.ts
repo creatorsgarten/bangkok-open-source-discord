@@ -1,6 +1,7 @@
 import { z, ZodType } from 'zod'
 import { getState, setState } from './StageStorage.js'
-import { isEqual } from 'lodash-es'
+import { isDeepStrictEqual } from 'util'
+import { inspect } from 'bun'
 
 const resources = new Map<string, Resource>()
 
@@ -120,8 +121,7 @@ export async function reconcile(confirm = false) {
           }
         }
       })()
-      if (isEqual(oldSpec, newSpec)) {
-        console.log(`* ${key}: Skip`)
+      if (isDeepStrictEqual(oldSpec, newSpec)) {
         results[key] = {
           resolved: {
             spec: oldSpec,
@@ -132,6 +132,18 @@ export async function reconcile(confirm = false) {
       }
       if (!confirm) {
         console.log(`* ${key}: Would ${oldState ? 'update' : 'create'}`)
+        const keys = [
+          ...new Set([
+            ...Object.keys(oldSpec || {}),
+            ...Object.keys(newSpec || {}),
+          ]),
+        ].sort()
+        for (const key of keys) {
+          const before = oldSpec?.[key]
+          const after = newSpec?.[key]
+          if (isDeepStrictEqual(before, after)) continue
+          console.log(`    * ${key}: ${inspect(before)} -> ${inspect(after)}`)
+        }
         results[key] = {}
         return
       }

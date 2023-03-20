@@ -3,6 +3,14 @@ BKKRewardHunter#category:
     name: 'BKK Reward Hunter'
   state:
     id: '1085797861666603110'
+BKKRewardHunter#role:
+  spec:
+    color: 4836425
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'proj-bkk-reward-hunter'
+  state:
+    id: '1085797862228643840'
 BKKRewardHunter#textChannel:
   spec:
     guildId: '1062609208106832002'
@@ -15,6 +23,14 @@ bankforthepoor#category:
     name: 'Bank4all'
   state:
     id: '1079339533360967760'
+bankforthepoor#role:
+  spec:
+    color: 13421641
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'proj-bank4all'
+  state:
+    id: '1079344565439451208'
 bankforthepoor#textChannel:
   spec:
     guildId: '1062609208106832002'
@@ -27,6 +43,14 @@ bkkchangelog#category:
     name: 'bkkchangelog'
   state:
     id: '1079340090335170611'
+bkkchangelog#role:
+  spec:
+    color: 4836556
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'proj-bkkchangelog'
+  state:
+    id: '1079344564013383680'
 bkkchangelog#textChannel:
   spec:
     guildId: '1062609208106832002'
@@ -39,6 +63,14 @@ fillyouintheblank#category:
     name: 'Fill You In The Blank'
   state:
     id: '1079339713539866694'
+fillyouintheblank#role:
+  spec:
+    color: 13421641
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'proj-fill-you-in-the-blank'
+  state:
+    id: '1079344566081159208'
 fillyouintheblank#textChannel:
   spec:
     guildId: '1062609208106832002'
@@ -58,6 +90,14 @@ greenspaces#category:
     name: 'Green Population'
   state:
     id: '1079339057840144414'
+greenspaces#role:
+  spec:
+    color: 13388105
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'proj-green-population'
+  state:
+    id: '1079344564311162992'
 greenspaces#textChannel:
   spec:
     guildId: '1062609208106832002'
@@ -77,6 +117,14 @@ mobility4all#category:
     name: 'Mobility4All'
   state:
     id: '1079694054578716773'
+mobility4all#role:
+  spec:
+    color: 4803020
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'proj-mobility4all'
+  state:
+    id: '1079694055014940742'
 mobility4all#textChannel:
   spec:
     guildId: '1062609208106832002'
@@ -89,6 +137,14 @@ policytracka#category:
     name: 'policytracka'
   state:
     id: '1079365252841484390'
+policytracka#role:
+  spec:
+    color: 4836556
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'proj-policytracka'
+  state:
+    id: '1079365253353181254'
 policytracka#textChannel:
   spec:
     guildId: '1062609208106832002'
@@ -101,6 +157,14 @@ ratchagitja#category:
     name: 'Ratchagitja'
   state:
     id: '1079338842672353320'
+ratchagitja#role:
+  spec:
+    color: 13388105
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'proj-ratchagitja'
+  state:
+    id: '1079344563166122034'
 ratchagitja#textChannel:
   spec:
     guildId: '1062609208106832002'
@@ -113,6 +177,14 @@ smarttrafficlights#category:
     name: 'Smart Traffic Lights'
   state:
     id: '1079339953890283531'
+smarttrafficlights#role:
+  spec:
+    color: 4836425
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'proj-smart-traffic-lights'
+  state:
+    id: '1079344566639005777'
 smarttrafficlights#textChannel:
   spec:
     guildId: '1062609208106832002'
@@ -125,6 +197,14 @@ spendingvisualizer#category:
     name: 'Spending Visualizer'
   state:
     id: '1083352065650204756'
+spendingvisualizer#role:
+  spec:
+    color: 4803020
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'proj-spending-visualizer'
+  state:
+    id: '1083352066396794962'
 spendingvisualizer#textChannel:
   spec:
     guildId: '1062609208106832002'
@@ -137,6 +217,14 @@ thailandarearanking#category:
     name: 'Thailand Area Ranking'
   state:
     id: '1084432658563608667'
+thailandarearanking#role:
+  spec:
+    color: 13388236
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'proj-thailand-area-ranking'
+  state:
+    id: '1084432659155001415'
 thailandarearanking#textChannel:
   spec:
     guildId: '1062609208106832002'
@@ -149,6 +237,14 @@ vote66#category:
     name: 'Vote 66'
   state:
     id: '1085932529447600170'
+vote66#role:
+  spec:
+    color: 13388236
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'proj-vote66'
+  state:
+    id: '1085932529825091616'
 vote66#textChannel:
   spec:
     guildId: '1062609208106832002'
@@ -162,6 +258,14 @@ wonderfulsoftware#category:
     name: 'wonderful.software'
   state:
     id: '1087340392460079184'
+wonderfulsoftware#role:
+  spec:
+    color: 15576010
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'proj-wonderfulsoftware'
+  state:
+    id: '1087426335728730142'
 wonderfulsoftware#textChannel:
   spec:
     guildId: '1062609208106832002'

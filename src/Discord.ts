@@ -3,8 +3,11 @@ import { defineResourceKind } from './Reconciler.js'
 import { Env } from '@(-.-)/env'
 import {
   ChannelType,
+  RESTPatchAPIGuildRoleJSONBody,
   RESTPostAPIGuildChannelJSONBody,
   RESTPostAPIGuildChannelResult,
+  RESTPostAPIGuildRoleJSONBody,
+  RESTPostAPIGuildRoleResult,
 } from 'discord-api-types/v10'
 import Ky from 'ky'
 
@@ -100,6 +103,43 @@ export const TextChannel = defineResourceKind({
           } as RESTPostAPIGuildChannelJSONBody,
         })
         .json()) as RESTPostAPIGuildChannelResult
+      return { id: response.id }
+    }
+  },
+})
+
+export const Role = defineResourceKind({
+  id: 'role',
+  spec: z.object({
+    name: z.string(),
+    guildId: z.string(),
+    color: z.number().optional(),
+    mentionable: z.boolean().optional(),
+  }),
+  state: z.object({
+    id: z.string(),
+  }),
+  reconcile: async (state, data) => {
+    const client = getClient()
+    if (state) {
+      await client.patch(`guilds/${data.guildId}/roles/${state.id}`, {
+        json: {
+          name: data.name,
+          color: data.color,
+          mentionable: data.mentionable,
+        } as RESTPatchAPIGuildRoleJSONBody,
+      })
+      return state
+    } else {
+      const response = (await client
+        .post(`guilds/${data.guildId}/roles`, {
+          json: {
+            name: data.name,
+            color: data.color,
+            mentionable: data.mentionable,
+          } as RESTPostAPIGuildRoleJSONBody,
+        })
+        .json()) as RESTPostAPIGuildRoleResult
       return { id: response.id }
     }
   },

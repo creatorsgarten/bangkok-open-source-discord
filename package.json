@@ -9,6 +9,7 @@
   "dependencies": {
     "@types/js-yaml": "^4.0.5",
     "@types/lodash-es": "^4.17.7",
+    "colord": "^2.9.3",
     "discord-api-types": "^0.37.36",
     "js-yaml": "^4.1.0",
     "ky": "^0.33.3",

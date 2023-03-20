@@ -1,5 +1,6 @@
 import { defineResource, reconcile } from '../src/Reconciler.js'
-import { Category, TextChannel } from '../src/Discord.js'
+import { Category, Role, TextChannel } from '../src/Discord.js'
+import { colord } from 'colord'
 
 const guildId = '1062609208106832002'
 
@@ -79,7 +80,14 @@ interface TeamData {
   slug: string
   name: string
 }
+let teamCount = 0
 function team(id: string, data: TeamData) {
+  const teamId = teamCount++
+  const getColor = () => {
+    const hue = Math.round((teamId * 360) / teamCount)
+    const color = colord({ h: hue, s: 64, l: 80 }).toRgb()
+    return (color.r << 16) + (color.g << 8) + color.b
+  }
   const category = defineResource(Category, id, () => ({
     name: data.name,
     guildId,
@@ -88,6 +96,12 @@ function team(id: string, data: TeamData) {
     name: data.name,
     guildId,
     parentId: category.getState(ctx).id,
+  }))
+  defineResource(Role, id, () => ({
+    name: 'proj-' + data.slug,
+    guildId,
+    color: getColor(),
+    mentionable: true,
   }))
   const o = {
     withTextChannel: (chId: string, data: { name: string }) => {
