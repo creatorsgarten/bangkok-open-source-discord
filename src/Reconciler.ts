@@ -17,13 +17,17 @@ export interface ResourceKind<T extends ZodType, S extends ZodType> {
 export interface Resource {
   id: string
   kind: ResourceKind<any, any>
-  resolveSpec: () => any
+  resolveSpec: (resolutionContext: ResolutionContext) => any
 }
 
-export function defineResource<T extends ZodType>(
-  kind: ResourceKind<T, any>,
+export interface ResolutionContext {
+  getState(resourceId: string): Promise<any>
+}
+
+export function defineResource<T extends ZodType, S extends ZodType>(
+  kind: ResourceKind<T, S>,
   id: string,
-  resolveSpec: () => z.infer<T>,
+  resolveSpec: (resolutionContext: ResolutionContext) => z.infer<T>,
 ) {
   const key = [id, kind.id].join('#')
   if (resources.has(key)) {
@@ -35,6 +39,11 @@ export function defineResource<T extends ZodType>(
     resolveSpec,
   }
   resources.set(key, resource)
+  return {
+    getState(ctx: ResolutionContext) {
+      return ctx.getState(key) as z.infer<S>
+    },
+  }
 }
 
 export function defineResourceKind<T extends ZodType, S extends ZodType>(
@@ -43,33 +52,113 @@ export function defineResourceKind<T extends ZodType, S extends ZodType>(
   return kind
 }
 
-export async function reconcile() {
+class NeedsDependency extends Error {
+  constructor(public readonly dependency: string) {
+    super(`Resource "${dependency}" is required`)
+    this.name = 'NeedsDependency'
+  }
+}
+
+class DryRun extends Error {
+  constructor(key: string) {
+    super(`Wait for dependencies incl. ${key}`)
+    this.name = 'DryRun'
+  }
+}
+
+export async function reconcile(confirm = false) {
+  const promises = Object.create(null)
+  const results = Object.create(null)
+
   for (const [key, resource] of resources) {
     await reconcileResource(key, resource)
   }
 
-  async function reconcileResource(
+  function reconcileResource(key: string, resource: Resource) {
+    promises[key] ??= doReconcileResource(key, resource)
+    return promises[key]
+  }
+
+  async function doReconcileResource(
     key: string,
     resource: Resource,
   ): Promise<void> {
-    const oldData = await getState(key)
-    const oldSpec = oldData?.spec
-    const oldState = oldData?.state
-      ? resource.kind.state.parse(oldData?.state)
-      : undefined
-    const newSpec = resource.kind.spec.parse(resource.resolveSpec())
-    if (isEqual(oldSpec, newSpec)) {
-      console.log(`* ${key}: Skipping reconciliation (unchanged)`)
-      return
+    try {
+      const oldData = await getState(key)
+      const oldSpec = oldData?.spec
+      const oldState = oldData?.state
+        ? resource.kind.state.parse(oldData?.state)
+        : undefined
+      const newSpec = await (async () => {
+        for (;;) {
+          try {
+            return resource.kind.spec.parse(
+              resource.resolveSpec({
+                getState: (key) => {
+                  if (results[key]) {
+                    if (results[key].resolved) {
+                      return results[key].resolved.state
+                    }
+                    throw new DryRun(key)
+                  }
+                  throw new NeedsDependency(key)
+                },
+              }),
+            )
+          } catch (err) {
+            if (err instanceof NeedsDependency) {
+              const dependency = resources.get(err.dependency)
+              if (!dependency) {
+                throw new Error(
+                  `Dependency resource "${err.dependency}" not found`,
+                )
+              }
+              await reconcileResource(err.dependency, dependency)
+              continue
+            }
+            throw err
+          }
+        }
+      })()
+      if (isEqual(oldSpec, newSpec)) {
+        console.log(`* ${key}: Skip`)
+        results[key] = {
+          resolved: {
+            spec: oldSpec,
+            state: oldState,
+          },
+        }
+        return
+      }
+      if (!confirm) {
+        console.log(`* ${key}: Would ${oldState ? 'update' : 'create'}`)
+        results[key] = {}
+        return
+      }
+      console.log(
+        `* ${key}: Reconciling (${oldState ? 'update' : 'create'})...`,
+      )
+      const started = Date.now()
+      const newState = await resource.kind.reconcile(oldState, newSpec)
+      await setState(key, {
+        spec: newSpec,
+        state: newState,
+      })
+      console.log(`    -> Done in ${Date.now() - started} ms`)
+      results[key] = {
+        resolved: {
+          spec: newSpec,
+          state: newState,
+        },
+      }
+    } catch (err) {
+      if (err instanceof DryRun) {
+        results[key] = {}
+        console.log(`* ${key}: ${err.message}`)
+        return
+      }
+      throw err
     }
-    console.log(`* ${key}: Reconciling...`)
-    const started = Date.now()
-    const newState = await resource.kind.reconcile(oldState, newSpec)
-    await setState(key, {
-      spec: newSpec,
-      state: newState,
-    })
-    console.log(`    -> Done in ${Date.now() - started} ms`)
   }
 }
 

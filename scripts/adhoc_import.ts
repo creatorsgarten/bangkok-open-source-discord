@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs'
 import { injectState } from '../src/Reconciler.js'
-import { Category } from '../src/Discord.js'
+import { Category, TextChannel } from '../src/Discord.js'
 
 const tfstate = JSON.parse(readFileSync('terraform.tfstate', 'utf8'))
 
@@ -16,8 +16,25 @@ for (const resource of tfstate.resources) {
     await injectState(
       Category,
       resource.name.replace(/_category$/, ''),
-      { name: only(resource.instances).attributes.name },
+      {
+        name: only(resource.instances).attributes.name,
+        guildId: '1062609208106832002',
+      },
       { id: only(resource.instances).attributes.id },
     )
+  }
+  if (resource.type === 'discord_text_channel') {
+    if (resource.name.match(/_text$/)) {
+      await injectState(
+        TextChannel,
+        resource.name.replace(/_text$/, ''),
+        {
+          name: only(resource.instances).attributes.name,
+          guildId: '1062609208106832002',
+          parentId: only(resource.instances).attributes.category,
+        },
+        { id: only(resource.instances).attributes.id },
+      )
+    }
   }
 }

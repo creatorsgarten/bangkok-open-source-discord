@@ -4,6 +4,9 @@ import {
   defineResourceKind,
   reconcile,
 } from '../src/Reconciler.js'
+import { Category, TextChannel } from '../src/Discord.js'
+
+const guildId = '1062609208106832002'
 
 function build() {
   team('ratchagitja', {
@@ -65,11 +68,16 @@ function build() {
     slug: 'vote66',
     name: 'Vote 66',
   })
+
+  team('wonderfulsoftware', {
+    slug: 'wonderfulsoftware',
+    name: 'wonderful.software',
+  })
 }
 
 async function main() {
   build()
-  reconcile()
+  reconcile(process.argv.includes('--confirm'))
 }
 
 interface TeamData {
@@ -77,7 +85,15 @@ interface TeamData {
   name: string
 }
 function team(id: string, data: TeamData) {
-  defineResource(Category, id, () => ({ name: data.name }))
+  const category = defineResource(Category, id, () => ({
+    name: data.name,
+    guildId,
+  }))
+  defineResource(TextChannel, id, (ctx) => ({
+    name: data.name,
+    guildId,
+    parentId: category.getState(ctx).id,
+  }))
   const o = {
     withTextChannel: (id: string, data: { name: string }) => {
       return o
@@ -86,23 +102,4 @@ function team(id: string, data: TeamData) {
   return o
 }
 
-const Category = defineResourceKind({
-  id: 'category',
-  spec: z.object({
-    name: z.string(),
-  }),
-  state: z.object({
-    id: z.string(),
-  }),
-  reconcile: async (state, data) => {
-    throw new Error('unimplemented')
-  },
-})
-
-// try {
-//   const result = await ky.get(`guilds/${guildId}/roles`).json()
-//   console.log(result)
-// } catch (e) {
-//   console.error(e)
-// }
 await main()

@@ -3,58 +3,156 @@ BKKRewardHunter#category:
     name: 'BKK Reward Hunter'
   state:
     id: '1085797861666603110'
+BKKRewardHunter#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'bkk-reward-hunter'
+    parentId: '1085797861666603110'
+  state:
+    id: '1085797863151374386'
 bankforthepoor#category:
   spec:
     name: 'Bank4all'
   state:
     id: '1079339533360967760'
+bankforthepoor#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'bank4all'
+    parentId: '1079339533360967760'
+  state:
+    id: '1079339535349055538'
 bkkchangelog#category:
   spec:
     name: 'bkkchangelog'
   state:
     id: '1079340090335170611'
+bkkchangelog#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'bkkchangelog'
+    parentId: '1079340090335170611'
+  state:
+    id: '1079340091979333714'
 fillyouintheblank#category:
   spec:
     name: 'Fill You In The Blank'
   state:
     id: '1079339713539866694'
+fillyouintheblank#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'fill-you-in-the-blank'
+    parentId: '1079339713539866694'
+  state:
+    id: '1079339715230183484'
+fillyouintheblank_wikibangkok#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'wikibangkok'
+    parentId: '1079339713539866694'
+  state:
+    id: '1083288933552627732'
 greenspaces#category:
   spec:
     name: 'Green Population'
   state:
     id: '1079339057840144414'
+greenspaces#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'green-population'
+    parentId: '1079339057840144414'
+  state:
+    id: '1079339059593351220'
+greenspaces_wespace#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'we-space'
+    parentId: '1079339057840144414'
+  state:
+    id: '1079653610402615366'
 mobility4all#category:
   spec:
     name: 'Mobility4All'
   state:
     id: '1079694054578716773'
+mobility4all#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'mobility4all'
+    parentId: '1079694054578716773'
+  state:
+    id: '1079694055472119888'
 policytracka#category:
   spec:
     name: 'policytracka'
   state:
     id: '1079365252841484390'
+policytracka#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'policytracka'
+    parentId: '1079365252841484390'
+  state:
+    id: '1079365254112354335'
 ratchagitja#category:
   spec:
     name: 'Ratchagitja'
   state:
     id: '1079338842672353320'
+ratchagitja#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'ratchagitja'
+    parentId: '1079338842672353320'
+  state:
+    id: '1079338844425564230'
 smarttrafficlights#category:
   spec:
     name: 'Smart Traffic Lights'
   state:
     id: '1079339953890283531'
+smarttrafficlights#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'smart-traffic-lights'
+    parentId: '1079339953890283531'
+  state:
+    id: '1079339955890962502'
 spendingvisualizer#category:
   spec:
     name: 'Spending Visualizer'
   state:
     id: '1083352065650204756'
+spendingvisualizer#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'spending-visualizer'
+    parentId: '1083352065650204756'
+  state:
+    id: '1083352066694582372'
 thailandarearanking#category:
   spec:
     name: 'Thailand Area Ranking'
   state:
     id: '1084432658563608667'
+thailandarearanking#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'thailand-area-ranking'
+    parentId: '1084432658563608667'
+  state:
+    id: '1084432659385679983'
 vote66#category:
   spec:
     name: 'Vote 66'
   state:
     id: '1085932529447600170'
+vote66#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'vote66'
+    parentId: '1085932529447600170'
+  state:
+    id: '1085932530286473347'

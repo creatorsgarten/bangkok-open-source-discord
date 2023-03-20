@@ -4,7 +4,7 @@ import { isEqual } from 'lodash-es'
 
 let state: Record<string, any> | undefined
 
-const cloneDeep = <T>(value: T): T => JSON.parse(JSON.stringify(value))
+const cloneDeep = <T>(value: T): T => value && JSON.parse(JSON.stringify(value))
 
 export async function loadState() {
   if (!fs.existsSync('state.yml')) {
