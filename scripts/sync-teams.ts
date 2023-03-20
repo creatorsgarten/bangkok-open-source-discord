@@ -68,7 +68,7 @@ function build() {
 
   team('vote66', {
     slug: 'vote66',
-    name: 'Vote 66',
+    name: 'Vote66',
   })
 
   team('wonderfulsoftware', {
@@ -106,7 +106,7 @@ function team(id: string, data: TeamData) {
     parentId: category.getState(ctx).id,
   }))
   const role = defineResource(Role, id, () => ({
-    name: 'proj-' + data.slug,
+    name: 'Team ' + data.name,
     guildId,
     color: getColor(),
     mentionable: true,
