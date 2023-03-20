@@ -1,0 +1,60 @@
+BKKRewardHunter#category:
+  spec:
+    name: 'BKK Reward Hunter'
+  state:
+    id: '1085797861666603110'
+bankforthepoor#category:
+  spec:
+    name: 'Bank4all'
+  state:
+    id: '1079339533360967760'
+bkkchangelog#category:
+  spec:
+    name: 'bkkchangelog'
+  state:
+    id: '1079340090335170611'
+fillyouintheblank#category:
+  spec:
+    name: 'Fill You In The Blank'
+  state:
+    id: '1079339713539866694'
+greenspaces#category:
+  spec:
+    name: 'Green Population'
+  state:
+    id: '1079339057840144414'
+mobility4all#category:
+  spec:
+    name: 'Mobility4All'
+  state:
+    id: '1079694054578716773'
+policytracka#category:
+  spec:
+    name: 'policytracka'
+  state:
+    id: '1079365252841484390'
+ratchagitja#category:
+  spec:
+    name: 'Ratchagitja'
+  state:
+    id: '1079338842672353320'
+smarttrafficlights#category:
+  spec:
+    name: 'Smart Traffic Lights'
+  state:
+    id: '1079339953890283531'
+spendingvisualizer#category:
+  spec:
+    name: 'Spending Visualizer'
+  state:
+    id: '1083352065650204756'
+thailandarearanking#category:
+  spec:
+    name: 'Thailand Area Ranking'
+  state:
+    id: '1084432658563608667'
+vote66#category:
+  spec:
+    name: 'Vote 66'
+  state:
+    id: '1085932529447600170'

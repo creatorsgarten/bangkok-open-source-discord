@@ -1,7 +1,9 @@
-import { Env } from '@(-.-)/env'
 import { z } from 'zod'
-import Ky from 'ky'
-import { defineResource, defineResourceKind } from '../src/Reconciler.js'
+import {
+  defineResource,
+  defineResourceKind,
+  reconcile,
+} from '../src/Reconciler.js'
 
 function build() {
   team('ratchagitja', {
@@ -67,6 +69,7 @@ function build() {
 
 async function main() {
   build()
+  reconcile()
 }
 
 interface TeamData {
