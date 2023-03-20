@@ -72,7 +72,7 @@ function build() {
   team('wonderfulsoftware', {
     slug: 'wonderfulsoftware',
     name: 'wonderful.software',
-  })
+  }).withTextChannel('webring', { name: 'webring' })
 }
 
 async function main() {
@@ -95,7 +95,12 @@ function team(id: string, data: TeamData) {
     parentId: category.getState(ctx).id,
   }))
   const o = {
-    withTextChannel: (id: string, data: { name: string }) => {
+    withTextChannel: (chId: string, data: { name: string }) => {
+      defineResource(TextChannel, [id, chId].join('_'), (ctx) => ({
+        name: data.name,
+        guildId,
+        parentId: category.getState(ctx).id,
+      }))
       return o
     },
   }

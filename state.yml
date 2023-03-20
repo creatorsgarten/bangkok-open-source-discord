@@ -169,3 +169,10 @@ wonderfulsoftware#textChannel:
     parentId: '1087340392460079184'
   state:
     id: '1087340395421253682'
+wonderfulsoftware_webring#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'webring'
+    parentId: '1087340392460079184'
+  state:
+    id: '1087341096985710632'
