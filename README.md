@@ -11,10 +11,10 @@ Edit these messages files, and the corresponding messages will be updated in the
 
 ## Project channels
 
-Project channels are listed in `projects.rb`. To preview changes, run:
+Project channels are listed in `scripts/sync-teams.ts`. To preview changes, run:
 
 ```
-ruby projects.rb && env TF_VAR_discord_token=dummy terraform plan -refresh=false
+bun scripts/sync-teams.ts
 ```
 
 ## Why
