@@ -28,6 +28,6 @@ jobs:
           RESOURCES_WEBHOOK_URL: ${{ secrets.RESOURCES_WEBHOOK_URL }}
           RULES_WEBHOOK_URL: ${{ secrets.RULES_WEBHOOK_URL }}
       - name: Synchronize teams
-        run: bun scripts/sync-teams.ts
+        run: bun scripts/sync-teams.ts --confirm
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
