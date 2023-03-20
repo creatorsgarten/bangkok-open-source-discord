@@ -20,5 +20,13 @@ jobs:
         with:
           bun-version: '0.5.8'
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Preview teams
+
+      - name: Synchronize messages
+        run: bun scripts/sync-messages.ts
+        env:
+          RESOURCES_WEBHOOK_URL: ${{ secrets.RESOURCES_WEBHOOK_URL }}
+          RULES_WEBHOOK_URL: ${{ secrets.RULES_WEBHOOK_URL }}
+      - name: Synchronize teams
         run: bun scripts/sync-teams.ts
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}

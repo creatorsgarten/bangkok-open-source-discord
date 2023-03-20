@@ -18,21 +18,5 @@ jobs:
         with:
           bun-version: '0.5.8'
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Synchronize messages
-        run: bun scripts/sync-messages.ts
-        env:
-          RESOURCES_WEBHOOK_URL: ${{ secrets.RESOURCES_WEBHOOK_URL }}
-          RULES_WEBHOOK_URL: ${{ secrets.RULES_WEBHOOK_URL }}
-      - name: Synchronize teams
+      - name: Preview teams
         run: bun scripts/sync-teams.ts
-        env:
-          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        if: always()
-        with:
-          commit_message: Update state file
-          commit_user_name: 'creatorsgarten[bot]'
-          commit_user_email: 'creatorsgarten[bot]@users.noreply.github.com'
-      - name: Dump the new state
-        if: always()
-        run: cat state.yml
