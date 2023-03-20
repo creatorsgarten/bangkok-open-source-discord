@@ -1,9 +1,4 @@
-import { z } from 'zod'
-import {
-  defineResource,
-  defineResourceKind,
-  reconcile,
-} from '../src/Reconciler.js'
+import { defineResource, reconcile } from '../src/Reconciler.js'
 import { Category, TextChannel } from '../src/Discord.js'
 
 const guildId = '1062609208106832002'
