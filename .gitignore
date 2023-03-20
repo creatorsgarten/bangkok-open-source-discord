@@ -169,6 +169,3 @@ dist
 .pnp.\*
 
 .envrc
-.terraform
-terraform.tfstate.backup
-/projects.tf
