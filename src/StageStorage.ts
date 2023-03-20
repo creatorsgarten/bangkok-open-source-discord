@@ -1,6 +1,6 @@
 import { dump, load } from 'js-yaml'
 import fs from 'fs'
-import { isEqual } from 'lodash-es'
+import { isDeepStrictEqual } from 'util'
 
 let state: Record<string, any> | undefined
 
@@ -27,7 +27,7 @@ export async function setState(key: string, data: any) {
   }
   const oldState = state![key] ? cloneDeep(state![key]) : undefined
   const newState = cloneDeep(data)
-  if (isEqual(oldState, newState)) {
+  if (isDeepStrictEqual(oldState, newState)) {
     return
   }
   state![key] = newState
