@@ -156,3 +156,16 @@ vote66#textChannel:
     parentId: '1085932529447600170'
   state:
     id: '1085932530286473347'
+wonderfulsoftware#category:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'wonderful.software'
+  state:
+    id: '1087340392460079184'
+wonderfulsoftware#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'wonderful.software'
+    parentId: '1087340392460079184'
+  state:
+    id: '1087340395421253682'

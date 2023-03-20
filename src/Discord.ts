@@ -1,12 +1,12 @@
 import { z } from 'zod'
 import { defineResourceKind } from './Reconciler.js'
 import { Env } from '@(-.-)/env'
-import Ky from 'ky'
 import {
   ChannelType,
   RESTPostAPIGuildChannelJSONBody,
   RESTPostAPIGuildChannelResult,
 } from 'discord-api-types/v10'
+import Ky from 'ky'
 
 const env = Env(
   z.object({
@@ -14,13 +14,29 @@ const env = Env(
   }),
 )
 
+interface RequestOptions {
+  json: any
+}
+
 function getClient() {
-  return Ky.extend({
-    prefixUrl: 'https://discord.com/api/',
-    headers: {
-      Authorization: `Bot ${env.DISCORD_TOKEN}`,
-    },
-  })
+  const request = (method: string, url: string, options: RequestOptions) => {
+    return Ky(url, {
+      method,
+      prefixUrl: 'https://discord.com/api/',
+      headers: {
+        authorization: `Bot ${env.DISCORD_TOKEN}`,
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(options.json),
+      fetch: fetch as any,
+    })
+  }
+  return {
+    post: (url: string, options: RequestOptions) =>
+      request('POST', url, options),
+    patch: (url: string, options: RequestOptions) =>
+      request('PATCH', url, options),
+  }
 }
 
 export const Category = defineResourceKind({
