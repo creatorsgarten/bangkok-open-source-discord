@@ -46,6 +46,11 @@ function build() {
     name: 'bkkchangelog',
   })
 
+  team('creatorsgarten', {
+    slug: 'creatorsgarten',
+    name: 'Creatorsgarten.org',
+  })
+
   team('policytracka', {
     slug: 'policytracka',
     name: 'policytracka',

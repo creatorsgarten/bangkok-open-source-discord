@@ -305,6 +305,12 @@ techcal#textChannel:
     parentId: '1071062116024451103'
   state:
     id: '1071062147720814662'
+creatorsgarten#category:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'Creatorsgarten.org'
+  state:
+    id: '1068547826994389013'
 thailandarearanking#category:
   spec:
     guildId: '1062609208106832002'
