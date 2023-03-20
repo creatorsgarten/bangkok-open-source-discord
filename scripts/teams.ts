@@ -80,12 +80,14 @@ interface TeamData {
   slug: string
   name: string
 }
-let teamCount = 0
+const teamSlugs: string[] = []
 function team(id: string, data: TeamData) {
-  const teamId = teamCount++
+  teamSlugs.push(data.slug)
+  teamSlugs.sort()
   const getColor = () => {
-    const hue = Math.round((teamId * 360) / teamCount)
-    const color = colord({ h: hue, s: 64, l: 80 }).toRgb()
+    const index = teamSlugs.indexOf(data.slug)
+    const hue = Math.round((index * 360) / teamSlugs.length)
+    const color = colord({ h: hue, s: 80, l: 64 }).toRgb()
     return (color.r << 16) + (color.g << 8) + color.b
   }
   const category = defineResource(Category, id, () => ({
@@ -93,7 +95,7 @@ function team(id: string, data: TeamData) {
     guildId,
   }))
   defineResource(TextChannel, id, (ctx) => ({
-    name: data.name,
+    name: data.slug,
     guildId,
     parentId: category.getState(ctx).id,
   }))
