@@ -13,7 +13,7 @@ BKKRewardHunter#channelPermission:
   state: {}
 BKKRewardHunter#role:
   spec:
-    color: 16742519
+    color: 16741760
     guildId: '1062609208106832002'
     mentionable: true
     name: 'Team BKK Reward Hunter'
@@ -69,7 +69,7 @@ bkkchangelog#channelPermission:
   state: {}
 bkkchangelog#role:
   spec:
-    color: 16748611
+    color: 16746832
     guildId: '1062609208106832002'
     mentionable: true
     name: 'Team bkkchangelog'
@@ -82,6 +82,34 @@ bkkchangelog#textChannel:
     parentId: '1079340090335170611'
   state:
     id: '1079340091979333714'
+creatorsgarten#category:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'Creatorsgarten.org'
+  state:
+    id: '1068547826994389013'
+creatorsgarten#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1068547826994389013'
+    id: '1087443448279355504'
+    type: 'role'
+  state: {}
+creatorsgarten#role:
+  spec:
+    color: 15441958
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'Team Creatorsgarten.org'
+  state:
+    id: '1087443448279355504'
+creatorsgarten#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'creatorsgarten'
+    parentId: '1068547826994389013'
+  state:
+    id: '1087443447566311474'
 fillyouintheblank#category:
   spec:
     guildId: '1062609208106832002'
@@ -97,7 +125,7 @@ fillyouintheblank#channelPermission:
   state: {}
 fillyouintheblank#role:
   spec:
-    color: 14133525
+    color: 12432138
     guildId: '1062609208106832002'
     mentionable: true
     name: 'Team Fill You In The Blank'
@@ -132,7 +160,7 @@ greenspaces#channelPermission:
   state: {}
 greenspaces#role:
   spec:
-    color: 10271773
+    color: 8765741
     guildId: '1062609208106832002'
     mentionable: true
     name: 'Team Green Population'
@@ -167,7 +195,7 @@ mobility4all#channelPermission:
   state: {}
 mobility4all#role:
   spec:
-    color: 5097552
+    color: 3066460
     guildId: '1062609208106832002'
     mentionable: true
     name: 'Team Mobility4All'
@@ -195,7 +223,7 @@ policytracka#channelPermission:
   state: {}
 policytracka#role:
   spec:
-    color: 53133
+    color: 53138
     guildId: '1062609208106832002'
     mentionable: true
     name: 'Team policytracka'
@@ -223,7 +251,7 @@ ratchagitja#channelPermission:
   state: {}
 ratchagitja#role:
   spec:
-    color: 53454
+    color: 53450
     guildId: '1062609208106832002'
     mentionable: true
     name: 'Team Ratchagitja'
@@ -251,7 +279,7 @@ smarttrafficlights#channelPermission:
   state: {}
 smarttrafficlights#role:
   spec:
-    color: 52479
+    color: 52732
     guildId: '1062609208106832002'
     mentionable: true
     name: 'Team Smart Traffic Lights'
@@ -279,7 +307,7 @@ spendingvisualizer#channelPermission:
   state: {}
 spendingvisualizer#role:
   spec:
-    color: 49919
+    color: 50943
     guildId: '1062609208106832002'
     mentionable: true
     name: 'Team Spending Visualizer'
@@ -298,6 +326,21 @@ techcal#category:
     name: 'techcal.dev'
   state:
     id: '1071062116024451103'
+techcal#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1071062116024451103'
+    id: '1087443452674985986'
+    type: 'role'
+  state: {}
+techcal#role:
+  spec:
+    color: 47615
+    guildId: '1062609208106832002'
+    mentionable: true
+    name: 'Team techcal.dev'
+  state:
+    id: '1087443452674985986'
 techcal#textChannel:
   spec:
     guildId: '1062609208106832002'
@@ -305,12 +348,6 @@ techcal#textChannel:
     parentId: '1071062116024451103'
   state:
     id: '1071062147720814662'
-creatorsgarten#category:
-  spec:
-    guildId: '1062609208106832002'
-    name: 'Creatorsgarten.org'
-  state:
-    id: '1068547826994389013'
 thailandarearanking#category:
   spec:
     guildId: '1062609208106832002'
@@ -326,7 +363,7 @@ thailandarearanking#channelPermission:
   state: {}
 thailandarearanking#role:
   spec:
-    color: 6992127
+    color: 10070015
     guildId: '1062609208106832002'
     mentionable: true
     name: 'Team Thailand Area Ranking'
@@ -354,7 +391,7 @@ vote66#channelPermission:
   state: {}
 vote66#role:
   spec:
-    color: 13539071
+    color: 14716927
     guildId: '1062609208106832002'
     mentionable: true
     name: 'Team Vote66'
@@ -382,7 +419,7 @@ wonderfulsoftware#channelPermission:
   state: {}
 wonderfulsoftware#role:
   spec:
-    color: 16743664
+    color: 16742888
     guildId: '1062609208106832002'
     mentionable: true
     name: 'Team wonderful.software'
