@@ -130,8 +130,7 @@ export async function reconcile(confirm = false) {
         }
         return
       }
-      if (!confirm) {
-        console.log(`* ${key}: Would ${oldState ? 'update' : 'create'}`)
+      const printDiff = () => {
         const keys = [
           ...new Set([
             ...Object.keys(oldSpec || {}),
@@ -144,12 +143,17 @@ export async function reconcile(confirm = false) {
           if (isDeepStrictEqual(before, after)) continue
           console.log(`    * ${key}: ${inspect(before)} -> ${inspect(after)}`)
         }
+      }
+      if (!confirm) {
+        console.log(`* ${key}: Would ${oldState ? 'update' : 'create'}`)
+        printDiff()
         results[key] = {}
         return
       }
       console.log(
         `* ${key}: Reconciling (${oldState ? 'update' : 'create'})...`,
       )
+      printDiff()
       const started = Date.now()
       const newState = await resource.kind.reconcile(oldState, newSpec)
       await setState(key, {

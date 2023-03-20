@@ -4,6 +4,13 @@ BKKRewardHunter#category:
     name: 'BKK Reward Hunter'
   state:
     id: '1085797861666603110'
+BKKRewardHunter#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1085797861666603110'
+    id: '1085797862228643840'
+    type: 'role'
+  state: {}
 BKKRewardHunter#role:
   spec:
     color: 15572570
@@ -25,6 +32,13 @@ bankforthepoor#category:
     name: 'Bank4all'
   state:
     id: '1079339533360967760'
+bankforthepoor#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1079339533360967760'
+    id: '1079344565439451208'
+    type: 'role'
+  state: {}
 bankforthepoor#role:
   spec:
     color: 15555162
@@ -46,6 +60,13 @@ bkkchangelog#category:
     name: 'bkkchangelog'
   state:
     id: '1079340090335170611'
+bkkchangelog#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1079340090335170611'
+    id: '1079344564013383680'
+    type: 'role'
+  state: {}
 bkkchangelog#role:
   spec:
     color: 15589466
@@ -67,6 +88,13 @@ fillyouintheblank#category:
     name: 'Fill You In The Blank'
   state:
     id: '1079339713539866694'
+fillyouintheblank#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1079339713539866694'
+    id: '1079344566081159208'
+    type: 'role'
+  state: {}
 fillyouintheblank#role:
   spec:
     color: 11857242
@@ -95,6 +123,13 @@ greenspaces#category:
     name: 'Green Population'
   state:
     id: '1079339057840144414'
+greenspaces#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1079339057840144414'
+    id: '1079344564311162992'
+    type: 'role'
+  state: {}
 greenspaces#role:
   spec:
     color: 7400794
@@ -123,6 +158,13 @@ mobility4all#category:
     name: 'Mobility4All'
   state:
     id: '1079694054578716773'
+mobility4all#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1079694054578716773'
+    id: '1079694055014940742'
+    type: 'role'
+  state: {}
 mobility4all#role:
   spec:
     color: 5959046
@@ -144,6 +186,13 @@ policytracka#category:
     name: 'policytracka'
   state:
     id: '1079365252841484390'
+policytracka#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1079365252841484390'
+    id: '1079365253353181254'
+    type: 'role'
+  state: {}
 policytracka#role:
   spec:
     color: 5959114
@@ -165,6 +214,13 @@ ratchagitja#category:
     name: 'Ratchagitja'
   state:
     id: '1079338842672353320'
+ratchagitja#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1079338842672353320'
+    id: '1079344563166122034'
+    type: 'role'
+  state: {}
 ratchagitja#role:
   spec:
     color: 5950189
@@ -186,6 +242,13 @@ smarttrafficlights#category:
     name: 'Smart Traffic Lights'
   state:
     id: '1079339953890283531'
+smarttrafficlights#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1079339953890283531'
+    id: '1079344566639005777'
+    type: 'role'
+  state: {}
 smarttrafficlights#role:
   spec:
     color: 5932781
@@ -207,6 +270,13 @@ spendingvisualizer#category:
     name: 'Spending Visualizer'
   state:
     id: '1083352065650204756'
+spendingvisualizer#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1083352065650204756'
+    id: '1083352066396794962'
+    type: 'role'
+  state: {}
 spendingvisualizer#role:
   spec:
     color: 7363309
@@ -228,6 +298,13 @@ thailandarearanking#category:
     name: 'Thailand Area Ranking'
   state:
     id: '1084432658563608667'
+thailandarearanking#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1084432658563608667'
+    id: '1084432659155001415'
+    type: 'role'
+  state: {}
 thailandarearanking#role:
   spec:
     color: 11819757
@@ -249,6 +326,13 @@ vote66#category:
     name: 'Vote 66'
   state:
     id: '1085932529447600170'
+vote66#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1085932529447600170'
+    id: '1085932529825091616'
+    type: 'role'
+  state: {}
 vote66#role:
   spec:
     color: 15555296
@@ -270,6 +354,13 @@ wonderfulsoftware#category:
     name: 'wonderful.software'
   state:
     id: '1087340392460079184'
+wonderfulsoftware#channelPermission:
+  spec:
+    allow: '536879104'
+    channelId: '1087340392460079184'
+    id: '1087426335728730142'
+    type: 'role'
+  state: {}
 wonderfulsoftware#role:
   spec:
     color: 15555230

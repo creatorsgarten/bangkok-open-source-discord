@@ -39,6 +39,7 @@ function getClient() {
       request('POST', url, options),
     patch: (url: string, options: RequestOptions) =>
       request('PATCH', url, options),
+    put: (url: string, options: RequestOptions) => request('PUT', url, options),
   }
 }
 
@@ -142,5 +143,28 @@ export const Role = defineResourceKind({
         .json()) as RESTPostAPIGuildRoleResult
       return { id: response.id }
     }
+  },
+})
+
+export const ChannelPermission = defineResourceKind({
+  id: 'channelPermission',
+  spec: z.object({
+    id: z.string(),
+    channelId: z.string(),
+    allow: z.coerce.string().optional(),
+    deny: z.coerce.string().optional(),
+    type: z.enum(['role', 'member']),
+  }),
+  state: z.object({}),
+  reconcile: async (state, data) => {
+    const client = getClient()
+    await client.put(`channels/${data.channelId}/permissions/${data.id}`, {
+      json: {
+        allow: data.allow,
+        deny: data.deny,
+        type: data.type === 'role' ? 0 : 1,
+      },
+    })
+    return {}
   },
 })

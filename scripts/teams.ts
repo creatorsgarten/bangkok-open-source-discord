@@ -1,6 +1,12 @@
 import { defineResource, reconcile } from '../src/Reconciler.js'
-import { Category, Role, TextChannel } from '../src/Discord.js'
+import {
+  Category,
+  ChannelPermission,
+  Role,
+  TextChannel,
+} from '../src/Discord.js'
 import { colord } from 'colord'
+import { PermissionFlagsBits } from 'discord-api-types/v10'
 
 const guildId = '1062609208106832002'
 
@@ -99,11 +105,19 @@ function team(id: string, data: TeamData) {
     guildId,
     parentId: category.getState(ctx).id,
   }))
-  defineResource(Role, id, () => ({
+  const role = defineResource(Role, id, () => ({
     name: 'proj-' + data.slug,
     guildId,
     color: getColor(),
     mentionable: true,
+  }))
+  defineResource(ChannelPermission, id, (ctx) => ({
+    id: role.getState(ctx).id,
+    channelId: category.getState(ctx).id,
+    allow: String(
+      PermissionFlagsBits.ManageMessages | PermissionFlagsBits.ManageWebhooks,
+    ),
+    type: 'role' as const,
   }))
   const o = {
     withTextChannel: (chId: string, data: { name: string }) => {
