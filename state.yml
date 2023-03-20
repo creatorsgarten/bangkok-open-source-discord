@@ -13,10 +13,10 @@ BKKRewardHunter#channelPermission:
   state: {}
 BKKRewardHunter#role:
   spec:
-    color: 15572570
+    color: 16742519
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'proj-bkk-reward-hunter'
+    name: 'Team BKK Reward Hunter'
   state:
     id: '1085797862228643840'
 BKKRewardHunter#textChannel:
@@ -41,10 +41,10 @@ bankforthepoor#channelPermission:
   state: {}
 bankforthepoor#role:
   spec:
-    color: 15555162
+    color: 16740020
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'proj-bank4all'
+    name: 'Team Bank4all'
   state:
     id: '1079344565439451208'
 bankforthepoor#textChannel:
@@ -69,10 +69,10 @@ bkkchangelog#channelPermission:
   state: {}
 bkkchangelog#role:
   spec:
-    color: 15589466
+    color: 16748611
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'proj-bkkchangelog'
+    name: 'Team bkkchangelog'
   state:
     id: '1079344564013383680'
 bkkchangelog#textChannel:
@@ -97,10 +97,10 @@ fillyouintheblank#channelPermission:
   state: {}
 fillyouintheblank#role:
   spec:
-    color: 11857242
+    color: 14133525
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'proj-fill-you-in-the-blank'
+    name: 'Team Fill You In The Blank'
   state:
     id: '1079344566081159208'
 fillyouintheblank#textChannel:
@@ -132,10 +132,10 @@ greenspaces#channelPermission:
   state: {}
 greenspaces#role:
   spec:
-    color: 7400794
+    color: 10271773
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'proj-green-population'
+    name: 'Team Green Population'
   state:
     id: '1079344564311162992'
 greenspaces#textChannel:
@@ -167,10 +167,10 @@ mobility4all#channelPermission:
   state: {}
 mobility4all#role:
   spec:
-    color: 5959046
+    color: 5097552
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'proj-mobility4all'
+    name: 'Team Mobility4All'
   state:
     id: '1079694055014940742'
 mobility4all#textChannel:
@@ -195,10 +195,10 @@ policytracka#channelPermission:
   state: {}
 policytracka#role:
   spec:
-    color: 5959114
+    color: 53133
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'proj-policytracka'
+    name: 'Team policytracka'
   state:
     id: '1079365253353181254'
 policytracka#textChannel:
@@ -223,10 +223,10 @@ ratchagitja#channelPermission:
   state: {}
 ratchagitja#role:
   spec:
-    color: 5950189
+    color: 53454
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'proj-ratchagitja'
+    name: 'Team Ratchagitja'
   state:
     id: '1079344563166122034'
 ratchagitja#textChannel:
@@ -251,10 +251,10 @@ smarttrafficlights#channelPermission:
   state: {}
 smarttrafficlights#role:
   spec:
-    color: 5932781
+    color: 52479
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'proj-smart-traffic-lights'
+    name: 'Team Smart Traffic Lights'
   state:
     id: '1079344566639005777'
 smarttrafficlights#textChannel:
@@ -279,10 +279,10 @@ spendingvisualizer#channelPermission:
   state: {}
 spendingvisualizer#role:
   spec:
-    color: 7363309
+    color: 49919
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'proj-spending-visualizer'
+    name: 'Team Spending Visualizer'
   state:
     id: '1083352066396794962'
 spendingvisualizer#textChannel:
@@ -307,10 +307,10 @@ thailandarearanking#channelPermission:
   state: {}
 thailandarearanking#role:
   spec:
-    color: 11819757
+    color: 6992127
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'proj-thailand-area-ranking'
+    name: 'Team Thailand Area Ranking'
   state:
     id: '1084432659155001415'
 thailandarearanking#textChannel:
@@ -323,7 +323,7 @@ thailandarearanking#textChannel:
 vote66#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'Vote 66'
+    name: 'Vote66'
   state:
     id: '1085932529447600170'
 vote66#channelPermission:
@@ -335,10 +335,10 @@ vote66#channelPermission:
   state: {}
 vote66#role:
   spec:
-    color: 15555296
+    color: 13539071
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'proj-vote66'
+    name: 'Team Vote66'
   state:
     id: '1085932529825091616'
 vote66#textChannel:
@@ -363,10 +363,10 @@ wonderfulsoftware#channelPermission:
   state: {}
 wonderfulsoftware#role:
   spec:
-    color: 15555230
+    color: 16743664
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'proj-wonderfulsoftware'
+    name: 'Team wonderful.software'
   state:
     id: '1087426335728730142'
 wonderfulsoftware#textChannel:
