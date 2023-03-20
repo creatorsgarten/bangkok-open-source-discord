@@ -122,6 +122,7 @@ export async function reconcile(confirm = false) {
         }
       })()
       if (isDeepStrictEqual(oldSpec, newSpec)) {
+        console.log(`* ${key}: Skip (unchanged)`)
         results[key] = {
           resolved: {
             spec: oldSpec,
