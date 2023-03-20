@@ -107,7 +107,7 @@ function team(id: string, data: TeamData) {
     return (color.r << 16) + (color.g << 8) + color.b
   }
   const category = defineResource(Category, id, () => ({
-    name: data.name,
+    name: `—【 ${data.name} 】—`,
     guildId,
   }))
   defineResource(TextChannel, id, (ctx) => ({
