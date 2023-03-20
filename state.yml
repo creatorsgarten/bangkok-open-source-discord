@@ -1,7 +1,7 @@
 BKKRewardHunter#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'BKK Reward Hunter'
+    name: '—【 BKK Reward Hunter 】—'
   state:
     id: '1085797861666603110'
 BKKRewardHunter#channelPermission:
@@ -29,7 +29,7 @@ BKKRewardHunter#textChannel:
 bankforthepoor#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'Bank4all'
+    name: '—【 Bank4all 】—'
   state:
     id: '1079339533360967760'
 bankforthepoor#channelPermission:
@@ -57,7 +57,7 @@ bankforthepoor#textChannel:
 bkkchangelog#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'bkkchangelog'
+    name: '—【 bkkchangelog 】—'
   state:
     id: '1079340090335170611'
 bkkchangelog#channelPermission:
@@ -85,7 +85,7 @@ bkkchangelog#textChannel:
 creatorsgarten#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'Creatorsgarten.org'
+    name: '—【 Creatorsgarten.org 】—'
   state:
     id: '1068547826994389013'
 creatorsgarten#channelPermission:
@@ -113,7 +113,7 @@ creatorsgarten#textChannel:
 fillyouintheblank#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'Fill You In The Blank'
+    name: '—【 Fill You In The Blank 】—'
   state:
     id: '1079339713539866694'
 fillyouintheblank#channelPermission:
@@ -148,7 +148,7 @@ fillyouintheblank_wikibangkok#textChannel:
 greenspaces#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'Green Population'
+    name: '—【 Green Population 】—'
   state:
     id: '1079339057840144414'
 greenspaces#channelPermission:
@@ -183,7 +183,7 @@ greenspaces_wespace#textChannel:
 mobility4all#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'Mobility4All'
+    name: '—【 Mobility4All 】—'
   state:
     id: '1079694054578716773'
 mobility4all#channelPermission:
@@ -211,7 +211,7 @@ mobility4all#textChannel:
 policytracka#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'policytracka'
+    name: '—【 policytracka 】—'
   state:
     id: '1079365252841484390'
 policytracka#channelPermission:
@@ -239,7 +239,7 @@ policytracka#textChannel:
 ratchagitja#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'Ratchagitja'
+    name: '—【 Ratchagitja 】—'
   state:
     id: '1079338842672353320'
 ratchagitja#channelPermission:
@@ -267,7 +267,7 @@ ratchagitja#textChannel:
 smarttrafficlights#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'Smart Traffic Lights'
+    name: '—【 Smart Traffic Lights 】—'
   state:
     id: '1079339953890283531'
 smarttrafficlights#channelPermission:
@@ -295,7 +295,7 @@ smarttrafficlights#textChannel:
 spendingvisualizer#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'Spending Visualizer'
+    name: '—【 Spending Visualizer 】—'
   state:
     id: '1083352065650204756'
 spendingvisualizer#channelPermission:
@@ -323,7 +323,7 @@ spendingvisualizer#textChannel:
 techcal#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'techcal.dev'
+    name: '—【 techcal.dev 】—'
   state:
     id: '1071062116024451103'
 techcal#channelPermission:
@@ -351,7 +351,7 @@ techcal#textChannel:
 thailandarearanking#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'Thailand Area Ranking'
+    name: '—【 Thailand Area Ranking 】—'
   state:
     id: '1084432658563608667'
 thailandarearanking#channelPermission:
@@ -379,7 +379,7 @@ thailandarearanking#textChannel:
 vote66#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'Vote66'
+    name: '—【 Vote66 】—'
   state:
     id: '1085932529447600170'
 vote66#channelPermission:
@@ -407,7 +407,7 @@ vote66#textChannel:
 wonderfulsoftware#category:
   spec:
     guildId: '1062609208106832002'
-    name: 'wonderful.software'
+    name: '—【 wonderful.software 】—'
   state:
     id: '1087340392460079184'
 wonderfulsoftware#channelPermission:
