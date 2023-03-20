@@ -292,6 +292,19 @@ spendingvisualizer#textChannel:
     parentId: '1083352065650204756'
   state:
     id: '1083352066694582372'
+techcal#category:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'techcal.dev'
+  state:
+    id: '1071062116024451103'
+techcal#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'techcal'
+    parentId: '1071062116024451103'
+  state:
+    id: '1071062147720814662'
 thailandarearanking#category:
   spec:
     guildId: '1062609208106832002'

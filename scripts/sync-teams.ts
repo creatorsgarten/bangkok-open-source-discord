@@ -61,6 +61,11 @@ function build() {
     name: 'Spending Visualizer',
   })
 
+  team('techcal', {
+    slug: 'techcal',
+    name: 'techcal.dev',
+  })
+
   team('thailandarearanking', {
     slug: 'thailand-area-ranking',
     name: 'Thailand Area Ranking',
