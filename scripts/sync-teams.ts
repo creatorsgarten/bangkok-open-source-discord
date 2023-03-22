@@ -18,7 +18,7 @@ function build() {
 
   team('greenspaces', {
     slug: 'green-population',
-    name: 'Green Population',
+    name: 'We Space',
   }).withTextChannel('wespace', { name: 'we-space' })
 
   team('bankforthepoor', {
