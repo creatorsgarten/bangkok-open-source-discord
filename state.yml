@@ -148,7 +148,7 @@ fillyouintheblank_wikibangkok#textChannel:
 greenspaces#category:
   spec:
     guildId: '1062609208106832002'
-    name: '—【 Green Population 】—'
+    name: '—【 We Space 】—'
   state:
     id: '1079339057840144414'
 greenspaces#channelPermission:
@@ -163,7 +163,7 @@ greenspaces#role:
     color: 8765741
     guildId: '1062609208106832002'
     mentionable: true
-    name: 'Team Green Population'
+    name: 'Team We Space'
   state:
     id: '1079344564311162992'
 greenspaces#textChannel:
