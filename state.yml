@@ -110,6 +110,13 @@ creatorsgarten#textChannel:
     parentId: '1068547826994389013'
   state:
     id: '1087443447566311474'
+creatorsgarten_vod#textChannel:
+  spec:
+    guildId: '1062609208106832002'
+    name: 'videos'
+    parentId: '1068547826994389013'
+  state:
+    id: '1089913227900637219'
 fillyouintheblank#category:
   spec:
     guildId: '1062609208106832002'
