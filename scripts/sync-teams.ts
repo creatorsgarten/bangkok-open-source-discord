@@ -49,7 +49,7 @@ function build() {
   team('creatorsgarten', {
     slug: 'creatorsgarten',
     name: 'Creatorsgarten.org',
-  })
+  }).withTextChannel('vod', { name: 'videos' })
 
   team('policytracka', {
     slug: 'policytracka',
