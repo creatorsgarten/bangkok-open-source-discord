@@ -1,4 +1,12 @@
-**Bangkok Open Source Hackathon information**
-https://bangkok.creatorsgarten.org/
+**Discord**: https://grtn.org/bkkoss-discord
 
+__**Bangkok Open Source Hackathon - Website Resources**__
+**Website**: https://bangkok.creatorsgarten.org/
+**WikiBangkok**: https://bangkok.source.in.th/wiki/Bangkok_Open_Source_Hackathon
+**GitHub**: https://github.com/creatorsgarten/bangkok-open-source-discord/
+
+__**Social**__
+**Facebook**: https://www.facebook.com/creatorsgarten
+
+*Please contact a staff member if these links are not working or are out of date.*
 [[แก้ไขข้อความ](https://github.com/creatorsgarten/bangkok-open-source-discord/blob/main/messages/resources.txt))
